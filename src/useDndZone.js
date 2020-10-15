@@ -14,7 +14,6 @@ const DEFAULT_FLIP_DURATION_MS = 200;
 */
 export function useDndZone(nodeRef, options, onConsider, onFinalize) {
     const updateR = useRef(() => {});
-    //const opts = deepCopy(options);
     const flipper = useRef({});
     console.debug(`action running ${JSON.stringify(options, null, 2)}`);
     useEffect(function init() {
@@ -36,7 +35,9 @@ export function useDndZone(nodeRef, options, onConsider, onFinalize) {
             onConsider(e.detail);
         }
         function adaptFinalize(e) {
-            if (flipper.current.read) flipper.current.read(options.items.map(item => item[ID_KEY]));
+            if (flipper.current.read) {
+                flipper.current.read(options.items.map(item => item[ID_KEY]));
+            }
             onFinalize(e.detail);
         }
         node.addEventListener('consider', adaptConsider);
@@ -49,10 +50,11 @@ export function useDndZone(nodeRef, options, onConsider, onFinalize) {
     useLayoutEffect(function update() {
         if (!nodeRef.current) return;
         console.debug(`updating ${JSON.stringify(options)}`);
-        const {items} = options;
-        if (flipper.current.flip) {
-            if (flipper.current) flipper.current.flip(options.items.map(item => item[ID_KEY]));
-        }
         updateR.current({flipDurationMs: DEFAULT_FLIP_DURATION_MS, ...options});
     });
+    useLayoutEffect(function flip() {
+        if (flipper.current.flip) {
+            flipper.current.flip(options.items.map(item => item[ID_KEY]));
+        }
+    }, [options.items]);
 }
