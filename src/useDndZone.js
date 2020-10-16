@@ -12,7 +12,7 @@ const DEFAULT_FLIP_DURATION_MS = 200;
 /* TODO
 * why is "action running" printed to the console twice on every operation?
 */
-export function useDndZone(nodeRef, options, onConsider, onFinalize) {
+export function useDndZone(nodeRef, options, onConsider, onFinalize = onConsider) {
     const updateR = useRef(() => {});
     const flipper = useRef({});
     console.debug(`action running ${JSON.stringify(options, null, 2)}`);
@@ -31,7 +31,9 @@ export function useDndZone(nodeRef, options, onConsider, onFinalize) {
         const node = nodeRef.current;
         console.debug("adding listeners", node);
         function adaptConsider(e) {
-            if (flipper.current.read) flipper.current.read(options.items.map(item => item[ID_KEY]));
+            if (flipper.current.read) {
+                flipper.current.read(options.items.map(item => item[ID_KEY]));
+            }
             onConsider(e.detail);
         }
         function adaptFinalize(e) {
