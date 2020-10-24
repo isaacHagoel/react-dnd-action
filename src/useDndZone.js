@@ -9,9 +9,7 @@ export function overrideItemIdKeyNameBeforeInitialisingDndZones(newId) {
 }
 
 const DEFAULT_FLIP_DURATION_MS = 200;
-/* TODO
-* why is "action running" printed to the console twice on every operation?
-*/
+
 export function useDndZone(nodeRef, options, onConsider, onFinalize = onConsider) {
     const updateR = useRef(() => {});
     const flipper = useRef({});
