@@ -4,7 +4,10 @@
   "description": "An awesome drag and drop library for React, using a custom-hook: Rich animations, nested containers, touch support, accessible out of the box and more",
   "author": "isaacHagoel",
   "license": "MIT",
-  "repository": "isaacHagoel/react-dnd-action",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacHagoel/react-dnd-action.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -12,6 +15,15 @@
     "node": ">=8",
     "npm": ">=5"
   },
+  "keywords": [
+    "react",
+    "drag and drop",
+    "sortable",
+    "dnd",
+    "draggable",
+    "accessible",
+    "touch"
+  ],
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
@@ -20,6 +32,9 @@
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
+  },
+  "dependencies": {
+    "svelte-dnd-action": "^0.6.18"
   },
   "peerDependencies": {
     "react": "^16.9.0"
@@ -64,8 +79,5 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-url": "^2.1.0"
-  },
-  "dependencies": {
-    "svelte-dnd-action": "^0.6.18"
   }
 }

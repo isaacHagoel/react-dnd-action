@@ -62,6 +62,9 @@ export default App;
 
 ```
 
+#### Examples:
+- [Simple vertical and horizontal lists](https://codesandbox.io/s/simple-list-hhuy3)
+
 ##### Input:
 The `useDndZone` custom hook takes four parameters:
 ```javascript
