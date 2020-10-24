@@ -1,6 +1,6 @@
 {
   "name": "react-dnd-action",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An awesome drag and drop library for React, using a custom-hook: Rich animations, nested containers, touch support, accessible out of the box and more",
   "author": "isaacHagoel",
   "license": "MIT",

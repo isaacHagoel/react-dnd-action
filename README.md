@@ -64,7 +64,7 @@ export default App;
 
 #### Examples:
 - [Simple vertical and horizontal lists](https://codesandbox.io/s/simple-list-hhuy3)
-
+- [Board with draggable items and columns](https://codesandbox.io/s/board-tyhfe?file=/src/Column.js)
 ##### Input:
 The `useDndZone` custom hook takes four parameters:
 ```javascript
@@ -72,6 +72,7 @@ useDndZone(containerReference, options , onConsider, onFinalize = onConsider)
 ```
 - `containerReference`: a ref to the container which should become a dnd zone (its children become draggable and it's possible to drag items from other dnd zones to it).
 - `options`: an options-object with the following attributes. It is passed to svelte-dnd-action:
+
 | Name                      | Type           | Required?                                                    | Default Value                                     | Description                                                  |
 | ------------------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------------------ |
 | `items`                   | Array<Object>  | Yes. Each object in the array **has to have** an `id` property (key name can be overridden globally) with a unique value (within all dnd-zones of the same type) | N/A                                               | The data array that is used to produce the list with the draggable items (the same thing you run your #each block on) |
