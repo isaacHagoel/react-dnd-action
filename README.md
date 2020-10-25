@@ -63,8 +63,17 @@ export default App;
 ```
 
 #### Examples:
-- [Simple vertical and horizontal lists](https://codesandbox.io/s/simple-list-hhuy3)
-- [Board with draggable items and columns](https://codesandbox.io/s/board-tyhfe?file=/src/Column.js)
+* [Simple vertical and horizontal lists](https://codesandbox.io/s/simple-list-hhuy3)
+* [Board with draggable items and columns](https://codesandbox.io/s/board-tyhfe)
+* [Notify parent only on drop (saving to a database)](https://codesandbox.io/s/notify-parent-only-on-drop-ckgkd)
+* [Drag Handles](https://codesandbox.io/s/drag-handles-g9tw6)
+* [Copy on Drag - simple and dragula like](https://codesandbox.io/s/copy-on-drag-u7h4u)
+* Custom active dropzone styling - coming soon
+* Customizing the dragged element - coming soon
+* Customizing the placeholder(shadow) element - coming soon
+* Unsortable lists with custom aria instructions - coming soon
+* Deep nesting - coming soon
+
 ##### Input:
 The `useDndZone` custom hook takes four parameters:
 ```javascript
