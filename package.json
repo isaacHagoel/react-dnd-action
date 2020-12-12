@@ -1,6 +1,6 @@
 {
   "name": "react-dnd-action",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An awesome drag and drop library for React, using a custom-hook: Rich animations, nested containers, touch support, accessible out of the box and more",
   "author": "isaacHagoel",
   "license": "MIT",
@@ -34,7 +34,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
-    "svelte-dnd-action": "^0.6.18"
+    "svelte-dnd-action": "^0.6.23"
   },
   "peerDependencies": {
     "react": "^16.9.0"

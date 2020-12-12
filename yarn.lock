@@ -2802,10 +2802,10 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
-svelte-dnd-action@^0.6.18:
-  version "0.6.18"
-  resolved "https://registry.yarnpkg.com/svelte-dnd-action/-/svelte-dnd-action-0.6.18.tgz#bd9883c72446d6024a700c3ff5971371a99e7d40"
-  integrity sha512-Mu6kgv7F+SDo9w5a521LkmenMnxvSMQ9pJEQ8AD+3LoPWAS5iIxgMqAfo/UCEvgcD+BPD9p+TZyNhtd3Jc+/bw==
+svelte-dnd-action@^0.6.23:
+  version "0.6.23"
+  resolved "https://registry.yarnpkg.com/svelte-dnd-action/-/svelte-dnd-action-0.6.23.tgz#329e4686fa20999693333ed41888e303192d30a3"
+  integrity sha512-7G4HX2ylyGIGx8mpgx8BibXm4zaEKxnNnW8KeMyncEHnDQVZq0AAi9XXu4ApwfH2OEu8tMAjSxBHKN59TNEv0g==
 
 table@^5.2.3:
   version "5.4.6"
